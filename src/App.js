@@ -1,0 +1,87 @@
+import './App.css'
+import React from 'react'
+
+// import Greet from './component/Title'
+// import Welcome from './pages/Home'
+// import Message from './pages/Home'
+// import Counter from './pages/Counter'
+// import FunctionClick from './component/FunctionClick'
+// import ClassClick from './pages/ClassClick'
+// import EventBind from './pages/EventBind'
+// import ParentComponent from './pages/ParentComponent'
+// import UserGreeting from './pages/UserGreeting'
+// import NameList from './component/NameList'
+import About from './pages/About'
+import Title from './component/Title'
+import List from './component/List'
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       isAbout : false,
+       isTitle : false
+    }
+  }
+
+  clickAbout(){
+      this.setState({
+        isAbout : true,
+        isTitle : false
+      })
+  }
+
+  clickTitle(){
+    this.setState({
+      isTitle : true,
+      isAbout : false
+    })
+  }
+  
+  render(){
+    let page
+    if (this.state.isAbout){
+      page = <About/>
+    } else {
+      page = <Title/>
+    }
+  return (
+    <div className="App">
+      {/* <Greet name='Umang'>
+        <p>This is children props</p>
+      </Greet>
+      <Greet name='Dhruv'>
+        <button>Action</button>
+      </Greet>
+      <Greet name='Sajan'/> */}
+
+      {/* <Welcome name='Tirth'/>
+      <Welcome name='Dhaval'/>
+      <Welcome name='Niraj'/>  */}
+
+      {/* <Message/> */}
+
+      {/* <Counter/> */}
+
+      {/* <FunctionClick/> */}
+
+      {/* <ClassClick/> */}
+
+      {/* <EventBind/> */}
+
+      {/* <ParentComponent/> */}
+
+      {/* <UserGreeting/> */}
+
+      {/* <NameList/> */}
+
+      {/* <button onClick={() => this.clickAbout()}>About</button>
+      <button onClick={() => this.clickTitle()}>Title</button>
+      {page} */}
+      <List/>
+    </div>
+  );
+  }
+}
+
+export default App
