@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import UserList from "./UserList"
+import HOC from "./HOC"
 
 // class Welcome extends Component {
 //     render() {
@@ -16,27 +18,39 @@ import React, { Component } from "react"
 
 // export default Welcome 
 
-class Message extends Component {
-    constructor() {
-        super()
-        this.state = {
-            message : 'Welcome visitor'
-        }
-    }
+// class Message extends Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             message : 'Welcome visitor'
+//         }
+//     }
 
-    changeMessage() {
-        this.setState({
-            message : 'Thank you for subscribing'
-        })
-    }
-    render() {
-        return (
-            <div>
-                <h1>{this.state.message}</h1>
-                <button onClick={()=> this.changeMessage()} >Subscribe</button>
-            </div>
-        )
-    }
+//     changeMessage() {
+//         this.setState({
+//             message : 'Thank you for subscribing'
+//         })
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.state.message}</h1>
+//                 <button onClick={()=> this.changeMessage()} >Subscribe</button>
+//             </div>
+//         )
+ 
+//     }
+// }
+
+// export default Message
+
+class Home extends Component {
+  render() {
+    const userData = [{id : 115, name:"Umang"},{id : 80, name:"Dhruv"},{id : 58, name:"Sajan"}]
+    const Users = HOC(UserList,userData)
+    return(<Users/>)
+  }
 }
 
-export default Message
+export default Home

@@ -30,8 +30,16 @@ import React, { PureComponent } from 'react'
 // import FocusInput from './pages/FocusInput'
 // import FRParentInput from './pages/FRParentInput'
 // import PortalDemo from './component/PortalDemo'
-import Hero from './component/Hero'
-import ErrorBoundary from './ErrorBoundary';
+// import Hero from './component/Hero'
+// import ErrorBoundary from './ErrorBoundary'
+// import ClickCounter from './pages/ClickCounter'
+// import HoverCounter from './pages/HoverCounter'
+// import Home from './pages/Home'
+// import ClickCounterTwo from './pages/ClickCounterTwo'
+// import HoverCounterTwo from './pages/HoverCounterTwo'
+// import User from './pages/User'
+// import Counter from './pages/Counter'
+import RenderPropsComponent from './RenderPropsComponent'
 class App extends React.Component {
   // constructor(props) {
   //   super(props)
@@ -137,7 +145,7 @@ class App extends React.Component {
 
       {/* <PortalDemo/> */}
 
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <Hero heroname="Batman"/>
       </ErrorBoundary>
       <ErrorBoundary>
@@ -145,9 +153,26 @@ class App extends React.Component {
       </ErrorBoundary>
       <ErrorBoundary>
         <Hero heroname="Joker"/>
-      </ErrorBoundary>
-    </div>
-  );
+      </ErrorBoundary> */}
+
+      {/* <ClickCounter name="Umang"/>
+      <HoverCounter/> */}
+
+      {/* <Home/> */}
+
+      {/* <ClickCounterTwo/>
+      <HoverCounterTwo/>
+      <User render={(isLoggedIN) => isLoggedIN ? 'Umang' : 'Guest'}/> */}
+
+      {/* <Counter render={(count,incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount}/>)}/>
+      <Counter render={(count,incrementCount) => (<HoverCounterTwo count={count} incrementCount={incrementCount}/>)}/> */}
+
+      <RenderPropsComponent render= {()=>{
+        return (
+          <h3>I am coming from render props</h3>
+        )
+      }}/>
+    </div>)
   }
 }
 
