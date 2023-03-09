@@ -16,8 +16,10 @@ import React from 'react'
 // import List from './component/List'
 // import Stylesheet from './component/Stylesheet'
 // import Inline from './component/Inline'
-import './appStyles.css'
-import styles from './appStyles.module.css'
+// import './appStyles.css'
+// import styles from './appStyles.module.css'
+// import Form from './pages/Form';
+import LoginForm from './pages/LoginForm';
 
 class App extends React.Component {
   // constructor(props) {
@@ -92,9 +94,14 @@ class App extends React.Component {
 
       {/* <Inline/> */}
 
-      <h1 className='error'>Error</h1>
-      <h1 className={styles.success}>Success</h1>
+      {/* <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1> */}
 
+      {/* <Form/> */}
+
+      {/* <List/> */}
+
+      <LoginForm/>
     </div>
   );
   }

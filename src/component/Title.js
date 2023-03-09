@@ -1,4 +1,5 @@
 import React from 'react'
+import './myStyles.css'
 
 // const Greet = props => {
 //     console.log(props)
@@ -33,10 +34,10 @@ import React from 'react'
 
 function Title(props) {
     console.log(props)
-    
+    let className = props.primary ? 'primary' : ''
     return (
         <div>
-          <p>This is {props.ti.title}, {props.ti.description}</p>
+          <p className={`${className} primary font-xl`}>This is {props.ti.title}, {props.ti.description}</p>
         </div>
     )
 }
