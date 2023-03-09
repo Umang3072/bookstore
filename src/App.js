@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import React, { PureComponent } from 'react'
 
 // import Greet from './component/Title'
 // import Welcome from './pages/Home'
@@ -20,8 +20,18 @@ import React from 'react'
 // import styles from './appStyles.module.css'
 // import Form from './pages/Form';
 // import LoginForm from './pages/LoginForm'
-import LifeCycleA from './pages/LifeCycleA'
-
+// import LifeCycleA from './pages/LifeCycleA'
+// import FragmentDemo from './component/FragmentDemo'
+// import Table from './component/Table'
+// import PureComp from './pages/PureComp'
+// import RegComp from './pages/RegComp'
+// import ParentComp from './pages/ParentComp'
+// import RefsDemo from './pages/RefsDemo'
+// import FocusInput from './pages/FocusInput'
+// import FRParentInput from './pages/FRParentInput'
+// import PortalDemo from './component/PortalDemo'
+import Hero from './component/Hero'
+import ErrorBoundary from './ErrorBoundary';
 class App extends React.Component {
   // constructor(props) {
   //   super(props)
@@ -104,7 +114,38 @@ class App extends React.Component {
 
       {/* <LoginForm/> */}
 
-      <LifeCycleA/>
+      {/* <LifeCycleA/> */}
+
+      {/* <FragmentDemo/> */}
+
+      {/* <Table/> */}
+
+      {/* <PureComp/>
+      <RegComp/> */}
+
+      {/* <ParentComp/> */}
+
+      {/* <List/> */}
+
+      {/* <RefsDemo/> */}
+      
+      {/* <FocusInput/> */}
+
+      {/* <FRParentInput/> */}
+
+      {/* <FocusInput/> */}
+
+      {/* <PortalDemo/> */}
+
+      <ErrorBoundary>
+        <Hero heroname="Batman"/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroname="Superman"/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroname="Joker"/>
+      </ErrorBoundary>
     </div>
   );
   }
