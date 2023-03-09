@@ -19,7 +19,8 @@ import React from 'react'
 // import './appStyles.css'
 // import styles from './appStyles.module.css'
 // import Form from './pages/Form';
-import LoginForm from './pages/LoginForm';
+// import LoginForm from './pages/LoginForm'
+import LifeCycleA from './pages/LifeCycleA'
 
 class App extends React.Component {
   // constructor(props) {
@@ -101,7 +102,9 @@ class App extends React.Component {
 
       {/* <List/> */}
 
-      <LoginForm/>
+      {/* <LoginForm/> */}
+
+      <LifeCycleA/>
     </div>
   );
   }
