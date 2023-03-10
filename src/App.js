@@ -39,7 +39,9 @@ import React, { PureComponent } from 'react'
 // import HoverCounterTwo from './pages/HoverCounterTwo'
 // import User from './pages/User'
 // import Counter from './pages/Counter'
-import RenderPropsComponent from './RenderPropsComponent'
+// import RenderPropsComponent from './RenderPropsComponent'
+import ComponentC from './pages/ComponentC'
+import { UserProvider } from './pages/userContext'
 class App extends React.Component {
   // constructor(props) {
   //   super(props)
@@ -167,11 +169,15 @@ class App extends React.Component {
       {/* <Counter render={(count,incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount}/>)}/>
       <Counter render={(count,incrementCount) => (<HoverCounterTwo count={count} incrementCount={incrementCount}/>)}/> */}
 
-      <RenderPropsComponent render= {()=>{
+      {/* <RenderPropsComponent render= {()=>{
         return (
           <h3>I am coming from render props</h3>
         )
-      }}/>
+      }}/> */}
+
+      <UserProvider value="Umang">
+        <ComponentC/>
+      </UserProvider>
     </div>)
   }
 }
