@@ -42,6 +42,9 @@ import React, { PureComponent } from 'react'
 // import RenderPropsComponent from './RenderPropsComponent'
 import ComponentC from './pages/ComponentC'
 import { UserProvider } from './pages/userContext'
+import PostList from './pages/PostList'
+import PostForm from './pages/PostForm'
+import Users from './pages/Users'
 class App extends React.Component {
   // constructor(props) {
   //   super(props)
@@ -175,9 +178,15 @@ class App extends React.Component {
         )
       }}/> */}
 
-      <UserProvider value="Umang">
+      {/* <UserProvider value="Umang">
         <ComponentC/>
-      </UserProvider>
+      </UserProvider> */}
+
+      {/* <PostList/> */}
+
+      {/* <PostForm/> */}
+
+      <Users/>
     </div>)
   }
 }
